@@ -24,8 +24,7 @@
     <!-- ======== Preloader =========== -->
 
     
-
-<!-- ======== main-wrapper start =========== -->
+    <!-- ======== main-wrapper start =========== -->
 <main class="main-wrapper" style="margin:0;padding:0;width:100vw;max-width:100vw;overflow-x:hidden;">
   <!-- ========== header start ========== -->
   <header class="header">
@@ -48,16 +47,6 @@
         <a href="dispositivo.html">Dispositivo</a>
       </nav>
     </div>
-
-
-
-
-
-
-    
-
-
-
 
 
       
@@ -163,34 +152,30 @@
             <!-- end row -->
           </div>
           <!-- ========== title-wrapper end ========== -->
-
-
-
-          <!-- ========== section start ========== -->
-      <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
+          
+          
+          
+          
+          
+          
+          <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
         <div class="container-fluid" style="margin:0;padding:0;width:auto;max-width:100vw;">
-
-          <br>
-
-          <div class="card-style mb-30">
-            <div class="table-responsive">
-              <h3 class="text-bold mb-3 text-center">Agenda de Tratamientos</h3>
-              <table class="table top-selling-table">
-                <thead>
-                  <tr>
-                    <th><h6 class="text-sm text-medium">Medicamento</h6></th>
-                    <th><h6 class="text-sm text-medium">Cantidad</h6></th>
-                    <th><h6 class="text-sm text-medium">Tipo</h6></th>
-                    <th><h6 class="text-sm text-medium">Inicio</h6></th>
-                    <th><h6 class="text-sm text-medium">Fin</h6></th>
-                    <th><h6 class="text-sm text-medium">Notas</h6></th>
-                  </tr>
-                </thead>
-                <tbody id="historial-tabla">
-                  <!-- Aquí se insertarán los medicamentos dinámicamente -->
-                </tbody>
-              </table>
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="title text-center">
+                  
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="card-style mb-30 p-4 shadow text-center">
+            <h2>Perfil de Usuario</h2>
+            <br><br>
+            <img src="perfil.jpg" alt="Avatar" style="width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:16px;border:3px solid #b5ddff;" />
+            <div class="profile-data mb-2"><span class="profile-label">Usuario:</span> <span id="profile-username">-</span></div>
+            <div class="profile-data mb-2"><span class="profile-label">Contraseña:</span> <span id="profile-password">-</span></div>
+            <button class="btn btn-primary mt-3" onclick="window.location.href='index.html'">Editar datos</button>
           </div>
         </div>
       </section>
@@ -200,8 +185,8 @@
           <div class="row">
             <div class="col-md-6">
               <div class="terms d-flex justify-content-center justify-content-md-end">
-                <a href="#0" class="text-sm">Términos y Condiciones</a>
-                <a href="#0" class="text-sm ml-15">Política de Privacidad</a>
+                <a href="terminos.html" class="text-sm">Términos y Condiciones</a>
+                <a href="privacidad.html" class="text-sm ml-15">Política de Privacidad</a>
               </div>
             </div>
           </div>
@@ -209,81 +194,38 @@
       </footer>
     </main>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
-
-
-
-
-
-
-function toggleMenu() {
-  const menu = document.getElementById('responsiveMenu');
-  menu.classList.toggle('show');
-}
-
-  function toggleMenu() {
-    const menu = document.getElementById('responsiveMenu');
-    menu.classList.toggle('d-none');
-    setTimeout(() => {
-      menu.classList.toggle('show');
-    }, 10);
-  }
-
-  function closeMenu() {
-    const menu = document.getElementById('responsiveMenu');
-    menu.classList.remove('show');
-    setTimeout(() => {
-      menu.classList.add('d-none');
-    }, 300);
-  }
-
-  // Cierra el menú si haces clic fuera
-  document.addEventListener('click', function (event) {
-    const menu = document.getElementById('responsiveMenu');
-    const toggle = document.querySelector('.menu-toggle');
-
-    if (
-      menu.classList.contains('show') &&
-      !menu.contains(event.target) &&
-      !toggle.contains(event.target)
-    ) {
-      closeMenu();
-    }
-  });
-
-
-
-
-
-      
-      document.addEventListener("DOMContentLoaded", function () {
-        var historial = [];
-        try {
-          historial = JSON.parse(localStorage.getItem("tratamientos")) || [];
-        } catch (e) {
-          historial = [];
+      function toggleMenu() {
+        const menu = document.getElementById('responsiveMenu');
+        menu.classList.toggle('d-none');
+        setTimeout(() => {
+          menu.classList.toggle('show');
+        }, 10);
+      }
+      function closeMenu() {
+        const menu = document.getElementById('responsiveMenu');
+        menu.classList.remove('show');
+        setTimeout(() => {
+          menu.classList.add('d-none');
+        }, 300);
+      }
+      document.addEventListener('click', function (event) {
+        const menu = document.getElementById('responsiveMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        if (
+          menu.classList.contains('show') &&
+          !menu.contains(event.target) &&
+          !toggle.contains(event.target)
+        ) {
+          closeMenu();
         }
-        var tabla = document.getElementById("historial-tabla");
-        tabla.innerHTML = "";
-        if (historial.length === 0) {
-          var fila = document.createElement("tr");
-          fila.innerHTML = '<td colspan="6" class="text-center text-muted">No hay medicamentos en el historial.</td>';
-          tabla.appendChild(fila);
-        } else {
-          historial.forEach(function(t) {
-            var fila = document.createElement("tr");
-            fila.innerHTML = `
-              <td><p class='text-sm'>${t.nombre || "Sin nombre"}</p></td>
-              <td><p class='text-sm'>${t.cantidad || "-"} ${t.unidad || ""}</p></td>
-              <td><p class='text-sm'>${t.tipo || "-"}</p></td>
-              <td><p class='text-sm'>${t.inicio || "-"}</p></td>
-              <td><p class='text-sm'>${t.fin || "-"}</p></td>
-              <td><p class='text-sm'>${t.notas || "-"}</p></td>
-            `;
-            tabla.appendChild(fila);
-          });
-        }
+      });
+      // Recupera los datos del usuario guardados en localStorage
+      document.addEventListener('DOMContentLoaded', function() {
+        var username = localStorage.getItem('usuario') || '-';
+        var password = localStorage.getItem('contrasena') || '-';
+        document.getElementById('profile-username').textContent = username;
+        document.getElementById('profile-password').textContent = password;
       });
     </script>
   </body>

@@ -83,7 +83,7 @@
                     <li>
                       <a href="#0">
                         <div class="image">
-                          <img src="perfil.jpg" alt="" />
+                          <img src="assets/images/lead/lead-1.png" alt="" />
                         </div>
                         <div class="content">
                           <h6>
@@ -107,7 +107,7 @@
                     <div class="profile-info">
                       <div class="info">
                         <div class="image">
-                          <img src="perfil.jpg" alt="" />
+                          <img src="assets/images/profile/profile-image.png" alt="" />
                         </div>
                         <div>
                           <h6 class="fw-500">Emmanuel</h6>
@@ -120,7 +120,7 @@
                     <li>
                       <div class="author-info flex items-center !p-1">
                         <div class="image">
-                          <img src="perfil.jpg" alt="image">
+                          <img src="assets/images/profile/profile-image.png" alt="image">
                         </div>
                         <div class="content">
                           <h4 class="text-sm">Emmanuel</h4>
@@ -130,7 +130,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                      <a href="perfil.html">
+                      <a href="#0">
                         <i class="lni lni-user"></i> Ver perfil
                       </a>
                     </li>
@@ -163,45 +163,62 @@
             <!-- end row -->
           </div>
           <!-- ========== title-wrapper end ========== -->
-
-
-
-          <!-- ========== section start ========== -->
-      <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
+           
+          
+          
+          
+          
+        <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
         <div class="container-fluid" style="margin:0;padding:0;width:auto;max-width:100vw;">
-
-          <br>
-
-          <div class="card-style mb-30">
-            <div class="table-responsive">
-              <h3 class="text-bold mb-3 text-center">Agenda de Tratamientos</h3>
-              <table class="table top-selling-table">
-                <thead>
-                  <tr>
-                    <th><h6 class="text-sm text-medium">Medicamento</h6></th>
-                    <th><h6 class="text-sm text-medium">Cantidad</h6></th>
-                    <th><h6 class="text-sm text-medium">Tipo</h6></th>
-                    <th><h6 class="text-sm text-medium">Inicio</h6></th>
-                    <th><h6 class="text-sm text-medium">Fin</h6></th>
-                    <th><h6 class="text-sm text-medium">Notas</h6></th>
-                  </tr>
-                </thead>
-                <tbody id="historial-tabla">
-                  <!-- Aquí se insertarán los medicamentos dinámicamente -->
-                </tbody>
-              </table>
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="title text-center">
+                  
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="card-style mb-30 p-4 shadow">
+            <h2>Política de Privacidad</h2>
+            <br>
+            <h4 class="mb-3">Tu privacidad es importante para nosotros</h4>
+            <p>En PillPoint, nos comprometemos a proteger la información personal de nuestros usuarios. Esta política explica cómo recopilamos, usamos y protegemos tus datos.</p>
+            <hr>
+            <h5>1. Información que recopilamos</h5>
+            <ul>
+              <li>Datos de usuario: nombre, correo electrónico, información de perfil.</li>
+              <li>Datos de tratamientos y dispositivos registrados.</li>
+            </ul>
+            <h5>2. Uso de la información</h5>
+            <ul>
+              <li>Gestionar y mostrar tus tratamientos y dispositivos.</li>
+              <li>Mejorar la experiencia de usuario y funcionalidades del sistema.</li>
+              <li>No compartimos tu información con terceros sin tu consentimiento.</li>
+            </ul>
+            <h5>3. Seguridad</h5>
+            <ul>
+              <li>Utilizamos medidas técnicas y organizativas para proteger tus datos.</li>
+              <li>Solo el usuario tiene acceso a su información personal y médica.</li>
+            </ul>
+            <h5>4. Derechos del usuario</h5>
+            <ul>
+              <li>Puedes modificar o eliminar tus datos en cualquier momento desde la plataforma.</li>
+              <li>Si tienes dudas o deseas ejercer tus derechos, contáctanos a través del correo de soporte.</li>
+            </ul>
+            <h5>5. Cambios en la política</h5>
+            <p>Nos reservamos el derecho de modificar esta política. Te notificaremos sobre cambios importantes a través de la plataforma.</p>
           </div>
         </div>
       </section>
-      <div style="margin-bottom:40px;"></div>
+      <div style="margin-bottom:80px;"></div>
       <footer class="footer">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-6">
               <div class="terms d-flex justify-content-center justify-content-md-end">
                 <a href="#0" class="text-sm">Términos y Condiciones</a>
-                <a href="#0" class="text-sm ml-15">Política de Privacidad</a>
+                <a href="privacidad.html" class="text-sm ml-15">Política de Privacidad</a>
               </div>
             </div>
           </div>
@@ -209,80 +226,30 @@
       </footer>
     </main>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
-
-
-
-
-
-
-function toggleMenu() {
-  const menu = document.getElementById('responsiveMenu');
-  menu.classList.toggle('show');
-}
-
-  function toggleMenu() {
-    const menu = document.getElementById('responsiveMenu');
-    menu.classList.toggle('d-none');
-    setTimeout(() => {
-      menu.classList.toggle('show');
-    }, 10);
-  }
-
-  function closeMenu() {
-    const menu = document.getElementById('responsiveMenu');
-    menu.classList.remove('show');
-    setTimeout(() => {
-      menu.classList.add('d-none');
-    }, 300);
-  }
-
-  // Cierra el menú si haces clic fuera
-  document.addEventListener('click', function (event) {
-    const menu = document.getElementById('responsiveMenu');
-    const toggle = document.querySelector('.menu-toggle');
-
-    if (
-      menu.classList.contains('show') &&
-      !menu.contains(event.target) &&
-      !toggle.contains(event.target)
-    ) {
-      closeMenu();
-    }
-  });
-
-
-
-
-
-      
-      document.addEventListener("DOMContentLoaded", function () {
-        var historial = [];
-        try {
-          historial = JSON.parse(localStorage.getItem("tratamientos")) || [];
-        } catch (e) {
-          historial = [];
-        }
-        var tabla = document.getElementById("historial-tabla");
-        tabla.innerHTML = "";
-        if (historial.length === 0) {
-          var fila = document.createElement("tr");
-          fila.innerHTML = '<td colspan="6" class="text-center text-muted">No hay medicamentos en el historial.</td>';
-          tabla.appendChild(fila);
-        } else {
-          historial.forEach(function(t) {
-            var fila = document.createElement("tr");
-            fila.innerHTML = `
-              <td><p class='text-sm'>${t.nombre || "Sin nombre"}</p></td>
-              <td><p class='text-sm'>${t.cantidad || "-"} ${t.unidad || ""}</p></td>
-              <td><p class='text-sm'>${t.tipo || "-"}</p></td>
-              <td><p class='text-sm'>${t.inicio || "-"}</p></td>
-              <td><p class='text-sm'>${t.fin || "-"}</p></td>
-              <td><p class='text-sm'>${t.notas || "-"}</p></td>
-            `;
-            tabla.appendChild(fila);
-          });
+      function toggleMenu() {
+        const menu = document.getElementById('responsiveMenu');
+        menu.classList.toggle('d-none');
+        setTimeout(() => {
+          menu.classList.toggle('show');
+        }, 10);
+      }
+      function closeMenu() {
+        const menu = document.getElementById('responsiveMenu');
+        menu.classList.remove('show');
+        setTimeout(() => {
+          menu.classList.add('d-none');
+        }, 300);
+      }
+      document.addEventListener('click', function (event) {
+        const menu = document.getElementById('responsiveMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        if (
+          menu.classList.contains('show') &&
+          !menu.contains(event.target) &&
+          !toggle.contains(event.target)
+        ) {
+          closeMenu();
         }
       });
     </script>
