@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-    <title>PillPoint</title>
+    <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+    <title>PILL-POINT</title>
 
     <!-- ========== All CSS files linkup ========= -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -23,31 +23,33 @@
     </div>
     <!-- ======== Preloader =========== -->
 
-
+    
     <!-- ======== main-wrapper start =========== -->
 <main class="main-wrapper" style="margin:0;padding:0;width:100vw;max-width:100vw;overflow-x:hidden;">
   <!-- ========== header start ========== -->
   <header class="header">
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Header Left: Logo + Navegación separada -->
-        <div class="col-lg-5 col-md-5 col-6">
-          <div class="header-left d-flex align-items-center">
-            <div class="logo-box me-4">
-              <a href="index.html">
-                <img src="logo.png" alt="Logo" class="logo-img" />
-              </a>
-            </div>
-            <nav class="nav-inline">
-              <a href="agenda.html">Tratamientos</a>
-              <a href="registros.html">Registros</a>
-              <a href="#">Historial</a>
-              <a href="#">Usuario</a>
-            </nav>
-          </div>
-        </div>
+  <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        
+    <!-- Contenedor izquierdo: logo + menú -->
+    <div class="d-flex align-items-center">
+      <div class="logo-box me-3">
+        <a href="inicio.html"><img src="logo.png" alt="Logo" class="logo-img" /></a>
+      </div>
+
+      <!-- Botón hamburguesa (solo en móvil) -->
+      <button class="menu-toggle d-md-none" onclick="toggleMenu()">☰</button>
+
+      <!-- Menú de navegación -->
+      <nav id="responsiveMenu" class="nav-inline d-none d-md-flex">
+        <a href="agenda.html">Agenda</a>
+        <a href="registros.html">Registros</a>
+        <a href="historial.html">Historial</a>
+        <a href="dispositivo.html">Dispositivo</a>
+      </nav>
+    </div>
+
+
+      
       <!-- Header Right: Vacío o listo para otro contenido -->
       <div class="col-lg-7 col-md-7 col-6">
         <div class="header-right">
@@ -70,7 +72,7 @@
                     <li>
                       <a href="#0">
                         <div class="image">
-                          <img src="assets/images/lead/lead-1.png" alt="" />
+                          <img src="perfil.jpg" alt="" />
                         </div>
                         <div class="content">
                           <h6>
@@ -94,7 +96,7 @@
                     <div class="profile-info">
                       <div class="info">
                         <div class="image">
-                          <img src="assets/images/profile/profile-image.png" alt="" />
+                          <img src="perfil.jpg" alt="" />
                         </div>
                         <div>
                           <h6 class="fw-500">Emmanuel</h6>
@@ -107,7 +109,7 @@
                     <li>
                       <div class="author-info flex items-center !p-1">
                         <div class="image">
-                          <img src="assets/images/profile/profile-image.png" alt="image">
+                          <img src="perfil.jpg" alt="image">
                         </div>
                         <div class="content">
                           <h4 class="text-sm">Emmanuel</h4>
@@ -117,7 +119,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                      <a href="#0">
+                      <a href="perfil.html">
                         <i class="lni lni-user"></i> Ver perfil
                       </a>
                     </li>
@@ -138,23 +140,20 @@
     </div>
   </div>
 </header>
-
+    
+    
       <!-- ========== section start ========== -->
       <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
         <div class="container-fluid" style="margin:0;padding:0;width:auto;max-width:100vw;">
           <!-- ========== title-wrapper start ========== -->
           <div class="title-wrapper pt-30">
             <div class="row align-items-center">
-              <div class="col-md-6">
-                <div class="title">
-                  <h2>PillPoint</h2>
-                </div>
-              </div>
             </div>
             <!-- end row -->
           </div>
           <!-- ========== title-wrapper end ========== -->
-      
+          
+
 
 
           <div class="container mt-4">
@@ -292,8 +291,44 @@
     <script src="assets/js/polyfill.js"></script>
     <script src="assets/js/main.js"></script>
 
-    
     <script>
+
+
+function toggleMenu() {
+  const menu = document.getElementById('responsiveMenu');
+  menu.classList.toggle('show');
+}
+
+  function toggleMenu() {
+    const menu = document.getElementById('responsiveMenu');
+    menu.classList.toggle('d-none');
+    setTimeout(() => {
+      menu.classList.toggle('show');
+    }, 10);
+  }
+
+  function closeMenu() {
+    const menu = document.getElementById('responsiveMenu');
+    menu.classList.remove('show');
+    setTimeout(() => {
+      menu.classList.add('d-none');
+    }, 300);
+  }
+
+  // Cierra el menú si haces clic fuera
+  document.addEventListener('click', function (event) {
+    const menu = document.getElementById('responsiveMenu');
+    const toggle = document.querySelector('.menu-toggle');
+
+    if (
+      menu.classList.contains('show') &&
+      !menu.contains(event.target) &&
+      !toggle.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
+
       document.addEventListener("DOMContentLoaded", function () {
         var btnAgregar = document.getElementById("btn-agregar-tratamiento");
         var modalElement = document.getElementById("modalConfirmarTratamiento");
