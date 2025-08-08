@@ -6,6 +6,48 @@ html {
   scroll-behavior: smooth;
 }
 
+.header {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-box img {
+  height: 40px;
+}
+
+.nav-inline {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#responsiveMenu {
+  display: none;
+}
+
+#responsiveMenu.show {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  #responsiveMenu {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
 
 
 .main-header {
@@ -192,6 +234,41 @@ p {
 }
 
 /* ========== cart style ========== */
+
+
+
+
+
+/* Estilo base del menú */
+.nav-inline {
+  gap: 1rem;
+}
+
+/* Menú desplegable en móvil */
+@media (max-width: 767.98px) {
+  #responsiveMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 9999;
+  }
+
+  #responsiveMenu.show {
+    display: flex !important;
+  }
+}
+
+
+
+
+
+
+
+
 .card-style {
   background: #fff;
   box-sizing: border-box;
