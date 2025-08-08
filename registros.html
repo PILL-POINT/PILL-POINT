@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+    <title>PillPoint</title>
+
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- ======== Preloader =========== -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+    <!-- ======== Preloader =========== -->
+
+    
+    <!-- ======== main-wrapper start =========== -->
+<main class="main-wrapper" style="margin:0;padding:0;width:100vw;max-width:100vw;overflow-x:hidden;">
+  <!-- ========== header start ========== -->
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Header Left: Logo + Navegación separada -->
+        <div class="col-lg-5 col-md-5 col-6">
+          <div class="header-left d-flex align-items-center">
+            <div class="logo-box me-4">
+              <a href="index.html">
+                <img src="logo.png" alt="Logo" class="logo-img" />
+              </a>
+            </div>
+            <nav class="nav-inline">
+              <a href="agenda.html">Tratamientos</a>
+              <a href="registros.html">Registros</a>
+              <a href="#">Historial</a>
+              <a href="#">Usuario</a>
+            </nav>
+          </div>
+        </div>
+
+  
+      
+
+      <!-- Header Right: Vacío o listo para otro contenido -->
+      <div class="col-lg-7 col-md-7 col-6">
+        <div class="header-right">
+          <!-- Puedes agregar algo aquí si lo necesitas -->
+          
+  <div class="notification-box ml-15 d-none d-md-flex">
+                  <button class="dropdown-toggle" type="button" id="notification" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11 20.1667C9.88317 20.1667 8.88718 19.63 8.23901 18.7917H13.761C13.113 19.63 12.1169 20.1667 11 20.1667Z"
+                        fill="" />
+                      <path
+                        d="M10.1157 2.74999C10.1157 2.24374 10.5117 1.83333 11 1.83333C11.4883 1.83333 11.8842 2.24374 11.8842 2.74999V2.82604C14.3932 3.26245 16.3051 5.52474 16.3051 8.24999V14.287C16.3051 14.5301 16.3982 14.7633 16.564 14.9352L18.2029 16.6342C18.4814 16.9229 18.2842 17.4167 17.8903 17.4167H4.10961C3.71574 17.4167 3.5185 16.9229 3.797 16.6342L5.43589 14.9352C5.6017 14.7633 5.69485 14.5301 5.69485 14.287V8.24999C5.69485 5.52474 7.60672 3.26245 10.1157 2.82604V2.74999Z"
+                        fill="" />
+                    </svg>
+                    <span></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification">
+                    <li>
+                      <a href="#0">
+                        <div class="image">
+                          <img src="assets/images/lead/lead-1.png" alt="" />
+                        </div>
+                        <div class="content">
+                          <h6>
+                            Usuario
+                          </h6>
+                          <p>
+                            Tienes <b>1</b> medicamento pendiente:
+                            Clonazepam 0.5 mg cada 24 horas.
+                          </p>
+                          <span>Hace un momento.</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class="profile-box ml-15">
+                  <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="profile-info">
+                      <div class="info">
+                        <div class="image">
+                          <img src="assets/images/profile/profile-image.png" alt="" />
+                        </div>
+                        <div>
+                          <h6 class="fw-500">Emmanuel</h6>
+                          <p>Usuario</p>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+                    <li>
+                      <div class="author-info flex items-center !p-1">
+                        <div class="image">
+                          <img src="assets/images/profile/profile-image.png" alt="image">
+                        </div>
+                        <div class="content">
+                          <h4 class="text-sm">Emmanuel</h4>
+                          <a class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs" href="#">Email@gmail.com</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#0">
+                        <i class="lni lni-user"></i> Ver perfil
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <i class="lni lni-alarm"></i> Notificaciones
+                      </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#0"> <i class="lni lni-exit"></i> Cerrar sesión </a>
+                    </li>
+                  </ul>
+                </div>
+                
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    
+      <!-- ========== section start ========== -->
+      <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
+        <div class="container-fluid" style="margin:0;padding:0;width:auto;max-width:100vw;">
+          <!-- ========== title-wrapper start ========== -->
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="title">
+                  <h2>Tratamientos registrados</h2>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- ========== title-wrapper end ========== -->
+
+          <!-- ========== alerts-wrapper start ========== -->
+          <div class="alerts-wrapper">
+            <div class="card-style mb-30" id="tratamientos-registrados">
+              <h4 class="mb-3"></h4>
+              <div id="lista-tratamientos"></div>
+            </div>
+          </div>
+          <!-- ========== alerts-wrapper end ========== -->
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- ========== section end ========== -->
+      <div class="d-flex justify-content-end" style="margin: 0 20px 40px 0;">
+        <a href="agenda.html" class="btn btn-primary btn-lg" style="background-color:#1976d2;border-color:#1976d2;color:#fff;">
+          Añadir tratamiento
+        </a>
+      </div>
+
+      <!-- ========== footer start =========== -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- end col-->
+            <div class="col-md-6">
+              <div class="terms d-flex justify-content-center justify-content-md-end">
+                <a href="#0" class="text-sm">Términos y Condiciones</a>
+                <a href="#0" class="text-sm ml-15">Política de Privacidad</a>
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </footer>
+      <!-- ========== footer end =========== -->
+    </main>
+    <!-- ======== main-wrapper end =========== -->
+
+
+    <!-- ========= All Javascript files linkup ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/dynamic-pie-chart.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/fullcalendar.js"></script>
+    <script src="assets/js/jvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/polyfill.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Mostrar tratamientos registrados desde localStorage
+      document.addEventListener("DOMContentLoaded", function () {
+        var lista = document.getElementById("lista-tratamientos");
+        var tratamientos = [];
+        try {
+          tratamientos = JSON.parse(localStorage.getItem("tratamientos")) || [];
+        } catch (e) {
+          tratamientos = [];
+        }
+        if (tratamientos.length === 0) {
+          lista.innerHTML = '<div class="alert alert-info">No hay tratamientos registrados.</div>';
+        } else {
+          tratamientos.forEach(function(t, idx) {
+            var card = document.createElement("div");
+            card.className = "card mb-3 p-3 border shadow-sm";
+            card.innerHTML = `
+              <h5 class="mb-2">${t.nombre || "Sin nombre"}</h5>
+              <p><b>Cantidad:</b> ${t.cantidad || "-"} ${t.unidad || ""}</p>
+              <p><b>Tipo:</b> ${t.tipo || "-"}</p>
+              <p><b>Fecha inicio:</b> ${t.inicio || "-"}</p>
+              <p><b>Fecha fin:</b> ${t.fin || "-"}</p>
+              <p><b>Intervalo (horas):</b> ${t.intervalo || "-"}</p>
+              <p><b>Hora primera toma:</b> ${t.hora || "-"}</p>
+              <p><b>Notas:</b> ${t.notas || "-"}</p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-primary btn-sm editar-tratamiento" data-idx="${idx}">Editar</button>
+                <button class="btn btn-danger btn-sm eliminar-tratamiento" style="background-color:#d32f2f;border-color:#d32f2f;color:#fff" data-idx="${idx}">Eliminar</button>
+              </div>
+            `;
+            lista.appendChild(card);
+          // Botón editar
+          card.querySelector('.editar-tratamiento').addEventListener('click', function() {
+            window.location.href = `agenda.html?edit=${idx}`;
+          });
+          // Botón eliminar
+          card.querySelector('.eliminar-tratamiento').addEventListener('click', function() {
+            // Crear ventana emergente personalizada
+            var confirmModal = document.createElement('div');
+            confirmModal.innerHTML = `
+              <div class="modal fade" id="modalConfirmEliminar${idx}" tabindex="-1" aria-labelledby="modalLabel${idx}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalLabel${idx}">Confirmar eliminación</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                      ¿Seguro que deseas eliminar este tratamiento?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-danger" id="btnConfirmEliminar${idx}">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+            document.body.appendChild(confirmModal);
+            var modal = new bootstrap.Modal(document.getElementById(`modalConfirmEliminar${idx}`));
+            modal.show();
+            document.getElementById(`btnConfirmEliminar${idx}`).addEventListener('click', function() {
+              var tratamientosActuales = JSON.parse(localStorage.getItem("tratamientos")) || [];
+              tratamientosActuales.splice(idx, 1);
+              localStorage.setItem("tratamientos", JSON.stringify(tratamientosActuales));
+              modal.hide();
+              document.getElementById(`modalConfirmEliminar${idx}`).remove();
+              window.location.reload();
+            });
+            document.getElementById(`modalConfirmEliminar${idx}`).addEventListener('hidden.bs.modal', function () {
+              document.getElementById(`modalConfirmEliminar${idx}`).remove();
+            });
+          });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
