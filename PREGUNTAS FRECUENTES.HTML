@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastillero Automático - Recordatorio de Medicamentos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .faq {
+            margin-top: 20px;
+        }
+        .faq h3 {
+            color: #1E90FF;
+            cursor: pointer;
+        }
+        .faq p {
+            display: none;
+            margin: 10px 0;
+        }
+        .contact-form {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .faq.active p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Pastillero Automático con Alarmas</h1>
+        <p>Tu aliado para recordar y tomar tus medicamentos a tiempo</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#informacion">Información</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Sección Información -->
+    <section id="informacion">
+        <h2>¿Qué es un Pastillero Automático?</h2>
+        <p>Un pastillero automático es un dispositivo inteligente diseñado para ayudarte a tomar tus medicamentos a tiempo, con alarmas programables para que nunca olvides la hora de la toma. Ideal para personas con múltiples tratamientos médicos o aquellas que requieren una toma puntual y constante de medicamentos.</p>
+        <p>Con este sistema, podrás configurar alarmas y recibir notificaciones en tu teléfono móvil para asegurarte de que estás tomando tus medicamentos correctamente y a tiempo.</p>
+    </section>
+
+    <!-- Sección Características -->
+    <section id="caracteristicas">
+        <h2>Características del Pastillero Automático</h2>
+        <ul>
+            <li>Alarmas personalizables para cada dosis.</li>
+            <li>Conexión a tu teléfono móvil a través de una app dedicada.</li>
+            <li>Compartimentos para varios medicamentos.</li>
+            <li>Diseño compacto y fácil de usar.</li>
+            <li>Recordatorios visuales y sonoros.</li>
+            <li>Autonomía de batería de hasta 30 días.</li>
+        </ul>
+    </section>
+
+    <!-- Sección Preguntas Frecuentes -->
+    <section id="faq" class="faq">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(this)">¿Cómo se configura el pastillero automático?</h3>
+            <p>Para configurar el pastillero, simplemente descarga la app desde tu teléfono móvil, sincronízalo con el dispositivo y programa las alarmas para cada toma de medicamentos. Es un proceso rápido y fácil.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(this)">¿Cuántos medicamentos se pueden almacenar?</h3>
+            <p>El pastillero tiene compartimentos suficientes para almacenar hasta 7 tipos de medicamentos, ideal para personas con tratamientos diarios.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(this)">¿Qué hacer si olvido tomar una dosis?</h3>
+            <p>En caso de olvidar una dosis, la app te notificará sobre el error. Podrás ajustar la programación o recibir un recordatorio adicional si es necesario.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(this)">¿El pastillero es adecuado para personas mayores?</h3>
+            <p>Sí, el diseño de nuestro pastillero está pensado para facilitar su uso por personas mayores. Es fácil de usar, con alertas sonoras y visuales para asegurar que se recuerde la toma de medicamentos.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si tienes más preguntas o deseas obtener más información sobre el pastillero automático, no dudes en ponerte en contacto con nosotros.</p>
+        <div class="contact-form">
+            <form action="#">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pastillero Automático | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Función para alternar la visibilidad de las respuestas en las preguntas frecuentes
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
