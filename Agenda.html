@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PILLPOINT_UTTT</title>
     <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+    <title>PILL-POINT</title>
 
     <!-- ========== All CSS files linkup ========= -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -15,129 +16,48 @@
     <link rel="stylesheet" href="assets/css/fullcalendar.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-  <body></body>
+  <body>
     <!-- ======== Preloader =========== -->
     <div id="preloader">
       <div class="spinner"></div>
     </div>
     <!-- ======== Preloader =========== -->
 
-    <!-- ======== sidebar-nav start =========== -->
-    <aside class="sidebar-nav-wrapper">
-      <div class="sidebar-nav-header">
-        <center><div class="sidebar-brand">
-          <a href="index.html">
-            <img src="LOGO.png" class="img-fluid" alt="LOGO.png" />
-          </a>
-        </div>
-        </center>
-      </div>
-      <hr>
-    <style>
-      .btn-custom {
-        background-color: #b5ddff;
-        color: rgb(0, 0, 0);
-        border: none;
-      }
-
-      .btn-custom:hover {
-        background-color: #a3d3fb;
-        color: black;
-      }
-
-      .dropdown-menu {
-        background-color: #b5ddff;
-        border: 1px solid #a3d3fb;
-      }
-
-      .dropdown-item {
-        color: black;
-      }
-
-      .dropdown-item:hover {
-        background-color: #a3d3fb;
-        color: black;
-      }
-    </style>
-  <br>
-   <center>
-    <div class="btn-group">
-      <a href="indexantiguo.html" class="btn btn-custom">PILL-POINT</a>
-    </div>
-  </center>
-  <br> 
-  <center>
-    <div class="btn-group">
-      <a href="Agenda.html" class="btn btn-custom">Agenda de Medicamento</a>
-    </div>
-  </center>
-   <br>
-   <center>
-    <div class="btn-group">
-      <a href="Usuario_copy.html" class="btn btn-custom">Usuario</a>
-    </div>
-  </center>
-   <br>
-  <center>
-    <div class="btn-group">
-      <a href="Dispositivo.html" class="btn btn-custom">Dispositivo</a>
-    </div>
-  </center>
-   <br>
-
-  <center>
-    <div class="btn-group">
-      <a href="Acerca_De.html" class="btn btn-custom">Acerca de... </a>
-    </div>
-  </center>
-   <br>
-   <center>
-    <div class="btn-group">
-      <a href="preguntas _frecuentes.html" class="btn btn-custom">Preguntas Frecuentes</a>
-    </div>
-  </center>
-   <br>
-   <center>
-    <div class="btn-group">
-      <a href="Privacidad y politicas de Seguridad" class="btn btn-custom">Privacidad y politicas de Seguridad</a>
-    </div>
-  </center>
-    <br>
-
-      </ul>
-    </div>
-    </center>
-    </aside>
-    <div class="overlay"></div>
-    <!-- ======== sidebar-nav end =========== -->
-
+    
     <!-- ======== main-wrapper start =========== -->
-    <main class="main-wrapper">
-      <!-- ========== header start ========== -->
-      <header class="header">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-5 col-md-5 col-6">
-              <div class="header-left d-flex align-items-center">
-                <div class="menu-toggle-btn mr-15">
-                  <button id="menu-toggle" class="main-btn primary-btn btn-hover">
-                    <i class="lni lni-chevron-left me-2"></i> Menu
-                  </button>
-                </div>
-                <div class="header-search d-none d-md-flex">
-                  <form action="#">
-                    <input type="text" placeholder="Search..." />
-                    <button><i class="lni lni-search-alt"></i></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-7 col-md-7 col-6">
-              <div class="header-right">
-               
-                <!-- profile start -->
+<main class="main-wrapper" style="margin:0;padding:0;width:100vw;max-width:100vw;overflow-x:hidden;">
+  <!-- ========== header start ========== -->
+  <header class="header">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <!-- Contenedor izquierdo: logo + menú -->
+    <div class="d-flex align-items-center">
+      <div class="logo-box me-3">
+        <a href="inicio de revision2.html"><img src="logo.png" alt="Logo" class="logo-img" /></a>
+      </div>
+
+      <!-- Botón hamburguesa (solo en móvil) -->
+      <button class="menu-toggle d-md-none" onclick="toggleMenu()">☰</button>
+
+      <!-- Menú de navegación -->
+      <nav id="responsiveMenu" class="nav-inline d-none d-md-flex">
+        <a href="inicio de revision2.html">Inicio</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="registros.html">Registros</a>
+        <a href="historial.html">Historial</a>
+        <a href="dispositivo.html">Dispositivo</a>
+      </nav>
+    </div>
+
+
+      
+      <!-- Header Right: Vacío o listo para otro contenido -->
+      <div class="col-lg-7 col-md-7 col-6">
+        <div class="header-right">
+          <!-- Puedes agregar algo aquí si lo necesitas -->
+
                 <div class="profile-box ml-15">
-                  <button class=".custom-dropdown-menu" type="button" id="profile"
+                  <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="profile-info">
                       <div class="info">
@@ -145,307 +65,142 @@
                           <img src="LOGO.png" alt="" />
                         </div>
                         <div>
-                          <h6 class="fw-500">PILL-POINT</h6>
-                          <p>Administración</p>
+                          <h6 class="fw-500">Usuario</h6>
                         </div>
                       </div>
                     </div>
                   </button>
-                  
-                  
-                  
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
                     <li>
-                      <div class="author-info flex items-center !p-2">
+                      <div class="author-info flex items-center !p-1">
                         <div class="image">
                           <img src="LOGO.png" alt="image">
                         </div>
                         <div class="content">
-                          <h4 href="indexantiguo.html"class="text-sm">PILL-POINT          </h4>
-                          <a class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs" href="#">Correo </a>
-                          <br>
+                          <h4 class="text-sm">Usuario</h4>
                           <a class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs" href="#">PILLPOINTUTTT@gmail.com</a>
                         </div>
                       </div>
                     </li>
                     <li class="divider"></li>
                     <li>
-                      <a href="Ver _perfil.html">
+                      <a href="perfil.html">
                         <i class="lni lni-user"></i> Ver perfil
                       </a>
                     </li>
                     <li>
-                      <a href="Notificaciones.html">
+                      <a href="#0">
                         <i class="lni lni-alarm"></i> Notificaciones
                       </a>
                     </li>
-                    <li>
-                      <a href="Mensajes.html"> <i class="lni lni-inbox"></i> Mensajes </a>
-                    </li>
-                   
                     <li class="divider"></li>
                     <li>
-                      <a href="Cerrar_Sesion.html"> <i class="lni lni-exit"></i> Cerrar sesión </a>
+                      <a href="index.html"> <i class="lni lni-exit"></i> Cerrar sesión </a>
                     </li>
                   </ul>
-
-
-
                 </div>
-                <!-- profile end -->
-              </div>
-            </div>
-          </div>
+                
         </div>
-      </header>
-      <!-- ========== header end ========== -->
-
+      </div>
+    </div>
+  </div>
+</header>
+    
+    
       <!-- ========== section start ========== -->
-      <section class="section">
-        <div class="container-fluid">
+      <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
+        <div class="container-fluid" style="margin:0;padding:0;width:auto;max-width:100vw;">
           <!-- ========== title-wrapper start ========== -->
           <div class="title-wrapper pt-30">
             <div class="row align-items-center">
-              <div class="col-md-6">
-                <div class="title">
-                  <h2>PILLPOINT</h2>
-                </div>
-              </div>
-              <!-- end col -->
-              <div class="col-md-6">
-                <div class="breadcrumb-wrapper">
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item">
-                        <a href="#0">PILLPOINT</a>
-                      </li>
-                      <li class="breadcrumb-item active" aria-current="page">
-                        PILLPOINT
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
-              <!-- end col -->
             </div>
             <!-- end row -->
           </div>
           <!-- ========== title-wrapper end ========== -->
-          <!DOCTYPE html>
+          
 
 
- <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      padding: 20px;
-    }
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: #b5ddff;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    input, button {
-      width: 100%;
-      padding: 8px;
-      margin: 5px 0;
-    }
-    .treatment {
-      background: white;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-    }
-  </style>
 
-  <div class="container">
-    <h1>Agenda de Tratamientos</h1>
-    <form id="treatment-form">
-      <label>Nombre del tratamiento:</label>
-      <input type="text" id="name" required>
+          <div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-7 col-md-8">
+      <div class="icon-card p-4 mb-30 shadow-sm border rounded">
+        <div class="content">
+          <h3 class="text-bold mb-3 text-center">Agenda de Tratamientos</h3>
+          <form id="treatment-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre del medicamento:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
 
-      <label>Fecha de inicio:</label>
-      <input type="date" id="start-date" required>
+            <div class="mb-3">
+              <label for="med-type" class="form-label">Tipo de medicamento:</label>
+              <select class="form-select" id="med-type" required>
+                <option value="">Selecciona una opción</option>
+                <option value="pastillas">Pastillas</option>
+                <option value="jarabe">Jarabe</option>
 
-      <label>Fecha de conclusión:</label>
-      <input type="date" id="end-date" required>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
 
-      <label>¿Cada cuántas horas debes tomarlo?</label>
-      <input type="number" id="interval-hours" min="1" required>
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Cantidad de medicamento:</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="quantity" min="1" required>
+                <select class="form-select" id="quantity-unit" style="max-width:120px;">
+                  <option value="unidades">Unidades</option>
+                  <option value="gramos">Gramos</option>
+                  <option value="mililitros">Mililitros</option>
+                </select>
+              </div>
+            </div>
 
-      <label>Hora de la primera toma:</label>
-      <input type="time" id="first-dose-time" required>
+            <div class="mb-3">
+              <label for="start-date" class="form-label">Fecha de inicio:</label>
+              <input type="date" class="form-control" id="start-date" required>
+            </div>
 
-      <button type="submit">Agregar tratamiento</button>
-    </form>
+            <div class="mb-3">
+              <label for="end-date" class="form-label">Fecha de conclusión:</label>
+              <input type="date" class="form-control" id="end-date" required>
+            </div>
 
-    <h2>Tratamientos Activos</h2>
-    <div id="treatment-list"></div>
+            <div class="mb-3">
+              <label for="dose-interval" class="form-label">Horas entre dosis:</label>
+              <input type="number" class="form-control" id="dose-interval" min="1" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="dose-time" class="form-label">Hora de la primera toma:</label>
+              <input type="time" class="form-control" id="dose-time" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="notes" class="form-label">Notas adicionales:</label>
+              <textarea class="form-control" id="notes" rows="3" placeholder="Ejemplo: Tomar en ayunas, después de comer, etc..."></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="button" class="btn btn-primary" id="btn-agregar-tratamiento">Agregar tratamiento</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+        </div>
+          <!-- ========== title-wrapper end ========== -->
 
-  <script>
-  const form = document.getElementById('treatment-form');
-  const list = document.getElementById('treatment-list');
-  const concludedList = document.createElement('div');
-  concludedList.id = 'concluded-list';
-  const deletedList = document.createElement('div');
-  deletedList.id = 'deleted-list';
-  list.insertAdjacentHTML("afterend", "<h2>Historial</h2><h3>Concluidos</h3>");
-  list.after(concludedList);
-  list.insertAdjacentHTML("afterend", "<h3>Eliminados</h3>");
-  list.after(deletedList);
 
-  let treatments = JSON.parse(localStorage.getItem('treatments')) || [];
-  let deletedTreatments = JSON.parse(localStorage.getItem('deletedTreatments')) || [];
-  let finishedTreatments = JSON.parse(localStorage.getItem('finishedTreatments')) || [];
 
-  function saveData() {
-    localStorage.setItem('treatments', JSON.stringify(treatments));
-    localStorage.setItem('deletedTreatments', JSON.stringify(deletedTreatments));
-    localStorage.setItem('finishedTreatments', JSON.stringify(finishedTreatments));
-  }
 
-  function scheduleNotification(time, name) {
-    if (Notification.permission === "granted") {
-      setTimeout(() => {
-        new Notification(`¡Hora de tomar tu medicamento: ${name}!`);
-      }, time);
-    }
-  }
-
-  function scheduleAlerts(startTime, intervalHours, name) {
-    const now = new Date();
-    const [hour, minute] = startTime.split(':').map(Number);
-    let nextDose = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minute, 0);
-
-    while (nextDose < now) {
-      nextDose.setHours(nextDose.getHours() + intervalHours);
-    }
-
-    const delay = nextDose - now;
-    scheduleNotification(delay, name);
-
-    setTimeout(() => {
-      scheduleAlerts(startTime, intervalHours, name);
-    }, delay);
-  }
-
-  function renderTreatments() {
-    list.innerHTML = '';
-    concludedList.innerHTML = '';
-    deletedList.innerHTML = '';
-
-    const today = new Date();
-    treatments.forEach((t, index) => {
-      const end = new Date(t.endDate);
-      const isConcluded = today > end;
-
-      const div = document.createElement('div');
-      div.className = 'treatment';
-      div.innerHTML = `
-        <strong>${t.name}</strong><br>
-        Del ${new Date(t.startDate).toLocaleDateString()} al ${new Date(t.endDate).toLocaleDateString()}<br>
-        Cada ${t.intervalHours} horas, iniciando a las ${t.firstDose}
-      `;
-
-      if (isConcluded) {
-        concludedList.appendChild(div);
-      } else {
-        const btnFinish = document.createElement('button');
-        btnFinish.textContent = 'Terminar';
-        btnFinish.className = 'btn btn-success btn-sm';
-        btnFinish.onclick = () => {
-          finishedTreatments.push({ ...t, finishedAt: new Date().toISOString() });
-          treatments.splice(index, 1);
-          saveData();
-          renderTreatments();
-        };
-
-        const btnDelete = document.createElement('button');
-        btnDelete.textContent = 'Eliminar';
-        btnDelete.className = 'btn btn-danger btn-sm';
-        btnDelete.onclick = () => {
-          deletedTreatments.push({ ...t, deletedAt: new Date().toISOString() });
-          treatments.splice(index, 1);
-          saveData();
-          renderTreatments();
-        };
-
-        div.appendChild(btnFinish);
-        div.appendChild(btnDelete);
-        list.appendChild(div);
-      }
-    });
-
-    finishedTreatments.forEach(t => {
-      const div = document.createElement('div');
-      div.className = 'treatment';
-      div.innerHTML = `
-        <strong>${t.name}</strong><br>
-        Terminado el ${new Date(t.finishedAt).toLocaleDateString()}<br>
-        Del ${new Date(t.startDate).toLocaleDateString()} al ${new Date(t.endDate).toLocaleDateString()}<br>
-        Cada ${t.intervalHours} horas, iniciando a las ${t.firstDose}
-      `;
-      concludedList.appendChild(div);
-    });
-
-    deletedTreatments.forEach((t, index) => {
-      const div = document.createElement('div');
-      div.className = 'treatment';
-      div.innerHTML = `
-        <strong>${t.name}</strong><br>
-        Eliminado el ${new Date(t.deletedAt).toLocaleDateString()}<br>
-        Del ${new Date(t.startDate).toLocaleDateString()} al ${new Date(t.endDate).toLocaleDateString()}<br>
-        Cada ${t.intervalHours} horas, iniciando a las ${t.firstDose}<br>
-      `;
-
-      const restoreBtn = document.createElement('button');
-      restoreBtn.textContent = 'Reactivar';
-      restoreBtn.className = 'btn btn-primary btn-sm';
-      restoreBtn.onclick = () => {
-        treatments.push(t);
-        deletedTreatments.splice(index, 1);
-        saveData();
-        renderTreatments();
-      };
-
-      div.appendChild(restoreBtn);
-      deletedList.appendChild(div);
-    });
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const startDate = document.getElementById('start-date').value;
-    const endDate = document.getElementById('end-date').value;
-    const intervalHours = parseInt(document.getElementById('interval-hours').value);
-    const firstDose = document.getElementById('first-dose-time').value;
-
-    if (new Date(startDate) > new Date(endDate)) {
-      alert('La fecha de conclusión debe ser posterior a la de inicio.');
-      return;
-    }
-
-    const treatment = { name, startDate, endDate, intervalHours, firstDose };
-    treatments.push(treatment);
-    saveData();
-    renderTreatments();
-    scheduleAlerts(firstDose, intervalHours, name);
-    form.reset();
-  });
-
-  // Solicitar permiso de notificación
-  if (Notification.permission !== 'granted') {
-    Notification.requestPermission();
-  }
-
-  renderTreatments();
-</script>
-
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- ========== section end ========== -->
+      <div style="margin-bottom:40px;"></div>
 
 
       <!-- ========== footer start =========== -->
@@ -454,19 +209,13 @@
           <div class="row">
             <div class="col-md-6 order-last order-md-first">
               <div class="copyright text-center text-md-start">
-                <p class="text-sm">
-                Desarrollado por 
-                  <a href="https://plainadmin.com" rel="nofollow" target="_blank">
-                    PILLPOINT
-                  </a>
-                </p>
               </div>
             </div>
             <!-- end col-->
             <div class="col-md-6">
               <div class="terms d-flex justify-content-center justify-content-md-end">
-                <a href="#0" class="text-sm">Term & Conditions</a>
-                <a href="#0" class="text-sm ml-15">Privacy & Policy</a>
+                <a href="#0" class="text-sm">Términos y Condiciones</a>
+                <a href="#0" class="text-sm ml-15">Política de Privacidad</a>
               </div>
             </div>
           </div>
@@ -476,6 +225,24 @@
       </footer>
       <!-- ========== footer end =========== -->
     </main>
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="modalConfirmarTratamiento" tabindex="-1" aria-labelledby="modalConfirmarTratamientoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalConfirmarTratamientoLabel">Confirmar acción</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            ¿Desea agregar este tratamiento?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="confirmarAgregarTratamiento">Sí, agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- ======== main-wrapper end =========== -->
 
     <!-- ========= All Javascript files linkup ======== -->
@@ -490,53 +257,117 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-      // ======== jvectormap activation
-      var markers = [
-        { name: "Egypt", coords: [26.8206, 30.8025] },
-        { name: "Russia", coords: [61.524, 105.3188] },
-        { name: "Canada", coords: [56.1304, -106.3468] },
-        { name: "Greenland", coords: [71.7069, -42.6043] },
-        { name: "Brazil", coords: [-14.235, -51.9253] },
-      ];
 
-      var jvm = new jsVectorMap({
-        map: "world_merc",
-        selector: "#map",
-        zoomButtons: true,
 
-        regionStyle: {
-          initial: {
-            fill: "#d1d5db",
-          },
-        },
+function toggleMenu() {
+  const menu = document.getElementById('responsiveMenu');
+  menu.classList.toggle('show');
+}
 
-        labels: {
-          markers: {
-            render: (marker) => marker.name,
-          },
-        },
+  function toggleMenu() {
+    const menu = document.getElementById('responsiveMenu');
+    menu.classList.toggle('d-none');
+    setTimeout(() => {
+      menu.classList.toggle('show');
+    }, 10);
+  }
 
-        markersSelectable: true,
-        selectedMarkers: markers.map((marker, index) => {
-          var name = marker.name;
+  function closeMenu() {
+    const menu = document.getElementById('responsiveMenu');
+    menu.classList.remove('show');
+    setTimeout(() => {
+      menu.classList.add('d-none');
+    }, 300);
+  }
 
-          if (name === "Russia" || name === "Brazil") {
-            return index;
+  // Cierra el menú si haces clic fuera
+  document.addEventListener('click', function (event) {
+    const menu = document.getElementById('responsiveMenu');
+    const toggle = document.querySelector('.menu-toggle');
+
+    if (
+      menu.classList.contains('show') &&
+      !menu.contains(event.target) &&
+      !toggle.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var btnAgregar = document.getElementById("btn-agregar-tratamiento");
+        var modalElement = document.getElementById("modalConfirmarTratamiento");
+        var confirmarBtn = document.getElementById("confirmarAgregarTratamiento");
+        var form = document.getElementById("treatment-form");
+        var modal;
+        // Obtener el índice de edición de la URL
+        function getEditIndex() {
+          var params = new URLSearchParams(window.location.search);
+          var idx = params.get('edit');
+          return idx !== null ? parseInt(idx) : null;
+        }
+        var editIdx = getEditIndex();
+        // Si editIdx existe, llenar el formulario con los datos
+        if (editIdx !== null && !isNaN(editIdx)) {
+          var tratamientos = [];
+          try {
+            tratamientos = JSON.parse(localStorage.getItem("tratamientos")) || [];
+          } catch (e) {
+            tratamientos = [];
           }
-        }),
-        markers: markers,
-        markerStyle: {
-          initial: { fill: "#4A6CF7" },
-          selected: { fill: "#ff5050" },
-        },
-        markerLabelStyle: {
-          initial: {
-            fontWeight: 400,
-            fontSize: 14,
-          },
-        },
+          var t = tratamientos[editIdx];
+          if (t) {
+            document.getElementById("name").value = t.nombre || "";
+            document.getElementById("quantity").value = t.cantidad || "";
+            document.getElementById("quantity-unit").value = t.unidad || "unidades";
+            document.getElementById("med-type").value = t.tipo || "";
+            document.getElementById("start-date").value = t.inicio || "";
+            document.getElementById("end-date").value = t.fin || "";
+            document.getElementById("dose-interval").value = t.intervalo || "";
+            document.getElementById("dose-time").value = t.hora || "";
+            document.getElementById("notes").value = t.notas || "";
+            btnAgregar.textContent = "Guardar cambios";
+          }
+        }
+        if (window.bootstrap && modalElement) {
+          modal = new bootstrap.Modal(modalElement);
+        }
+        if (btnAgregar && modal) {
+          btnAgregar.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.show();
+          });
+        }
+        if (confirmarBtn && form) {
+          confirmarBtn.addEventListener("click", function () {
+            modal.hide();
+            var tratamientos = [];
+            try {
+              tratamientos = JSON.parse(localStorage.getItem("tratamientos")) || [];
+            } catch (e) {
+              tratamientos = [];
+            }
+            var nuevo = {
+              nombre: document.getElementById("name").value,
+              cantidad: document.getElementById("quantity").value,
+              unidad: document.getElementById("quantity-unit").value,
+              tipo: document.getElementById("med-type").value,
+              inicio: document.getElementById("start-date").value,
+              fin: document.getElementById("end-date").value,
+              intervalo: document.getElementById("dose-interval").value,
+              hora: document.getElementById("dose-time").value,
+              notas: document.getElementById("notes").value
+            };
+            if (editIdx !== null && !isNaN(editIdx)) {
+              tratamientos[editIdx] = nuevo;
+            } else {
+              tratamientos.push(nuevo);
+            }
+            localStorage.setItem("tratamientos", JSON.stringify(tratamientos));
+            window.location.href = "registros.html";
+          });
+        }
       });
-     
     </script>
   </body>
 </html>
