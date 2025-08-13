@@ -1,373 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
-    <title>PILL-POINT</title>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+  <title>PILL-POINT</title>
 
-    <!-- ========== All CSS files linkup ========= -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/lineicons.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
-    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!-- ======== Preloader =========== -->
-    <div id="preloader">
-      <div class="spinner"></div>
-    </div>
-    <!-- ======== Preloader =========== -->
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/lineicons.css" />
+  <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/bodyiniciodesesion.css" />
+</head>
+<body>
 
-    
-    <!-- ======== main-wrapper start =========== -->
-<main class="main-wrapper" style="margin:0;padding:0;width:100vw;max-width:100vw;overflow-x:hidden;">
-  <!-- ========== header start ========== -->
-  <header class="header">
-  <div class="container-fluid d-flex align-items-center justify-content-between">
-
-    <!-- Contenedor izquierdo: logo + menú -->
-    <div class="d-flex align-items-center">
-      <div class="logo-box me-3">
-        <a href="inicio de revision2.html"><img src="logo.png" alt="Logo" class="logo-img" /></a>
+  <!-- LOGIN -->
+  <div class="login-box" id="login-section">
+    <h2>Iniciar sesión</h2>
+    <form id="loginForm">
+      <div class="user-box">
+        <input type="text" id="usuario" required>
+        <label for="usuario">Usuario</label>
       </div>
-
-      <!-- Botón hamburguesa (solo en móvil) -->
-      <button class="menu-toggle d-md-none" onclick="toggleMenu()">☰</button>
-
-      <!-- Menú de navegación -->
-      <nav id="responsiveMenu" class="nav-inline d-none d-md-flex">
-        <a href="inicio de revision2.html">Inicio</a>
-        <a href="agenda.html">Agenda</a>
-        <a href="registros.html">Registros</a>
-        <a href="historial.html">Historial</a>
-        <a href="dispositivo.html">Dispositivo</a>
-      </nav>
-    </div>
-
-
-      
-      <!-- Header Right: Vacío o listo para otro contenido -->
-      <div class="col-lg-7 col-md-7 col-6">
-        <div class="header-right">
-          <!-- Puedes agregar algo aquí si lo necesitas -->
-
-                <div class="profile-box ml-15">
-                  <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="profile-info">
-                      <div class="info">
-                        <div class="image">
-                          <img src="LOGO.png" alt="" />
-                        </div>
-                        <div>
-                          <h6 class="fw-500">Usuario</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
-                    <li>
-                      <div class="author-info flex items-center !p-1">
-                        <div class="image">
-                          <img src="LOGO.png" alt="image">
-                        </div>
-                        <div class="content">
-                          <h4 class="text-sm">Usuario</h4>
-                          <a class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs" href="#">PILLPOINTUTTT@gmail.com</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                      <a href="perfil.html">
-                        <i class="lni lni-user"></i> Ver perfil
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#0">
-                        <i class="lni lni-alarm"></i> Notificaciones
-                      </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                      <a href="index.html"> <i class="lni lni-exit"></i> Cerrar sesión </a>
-                    </li>
-                  </ul>
-                </div>
-                
-        </div>
+      <div class="user-box">
+        <input type="password" id="password" required>
+        <label for="password">Contraseña</label>
       </div>
-    </div>
+      <button type="submit" class="animated-button">
+        Ingresar
+        <span></span><span></span><span></span><span></span>
+      </button>
+    </form>
+    <p style="text-align: center; margin-top: 10px;">
+      ¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Registrarse</a>
+    </p>
   </div>
-</header>
-    
-    
-      <!-- ========== section start ========== -->
-      <section class="section" style="margin:0 20px;padding:0;width:auto;max-width:100vw;">
-        <div class="container-fluid" style="margin:0;padding:0;width:auto;max-width:100vw;">
-          <!-- ========== title-wrapper start ========== -->
-          <div class="title-wrapper pt-30">
-            <div class="row align-items-center">
-            </div>
-            <!-- end row -->
-          </div>
-          <!-- ========== title-wrapper end ========== -->
-          
 
-
-
-          <div class="container mt-4">
-  <div class="row justify-content-center">
-    <div class="col-xl-6 col-lg-7 col-md-8">
-      <div class="icon-card p-4 mb-30 shadow-sm border rounded">
-        <div class="content">
-          <h3 class="text-bold mb-3 text-center">Agenda de Tratamientos</h3>
-          <form id="treatment-form">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nombre del medicamento:</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="med-type" class="form-label">Tipo de medicamento:</label>
-              <select class="form-select" id="med-type" required>
-                <option value="">Selecciona una opción</option>
-                <option value="pastillas">Pastillas</option>
-                <option value="jarabe">Jarabe</option>
-
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="quantity" class="form-label">Cantidad de medicamento:</label>
-              <div class="input-group">
-                <input type="number" class="form-control" id="quantity" min="1" required>
-                <select class="form-select" id="quantity-unit" style="max-width:120px;">
-                  <option value="unidades">Unidades</option>
-                  <option value="gramos">Gramos</option>
-                  <option value="mililitros">Mililitros</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="start-date" class="form-label">Fecha de inicio:</label>
-              <input type="date" class="form-control" id="start-date" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="end-date" class="form-label">Fecha de conclusión:</label>
-              <input type="date" class="form-control" id="end-date" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="dose-interval" class="form-label">Horas entre dosis:</label>
-              <input type="number" class="form-control" id="dose-interval" min="1" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="dose-time" class="form-label">Hora de la primera toma:</label>
-              <input type="time" class="form-control" id="dose-time" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="notes" class="form-label">Notas adicionales:</label>
-              <textarea class="form-control" id="notes" rows="3" placeholder="Ejemplo: Tomar en ayunas, después de comer, etc..."></textarea>
-            </div>
-
-            <div class="text-center">
-              <button type="button" class="btn btn-primary" id="btn-agregar-tratamiento">Agregar tratamiento</button>
-            </div>
-          </form>
-        </div>
+  <!-- REGISTRO -->
+  <div class="login-box" id="registro-section" style="display:none;">
+    <h2>Registro</h2>
+    <form id="registerForm">
+      <div class="user-box">
+        <input type="text" id="newUser" required>
+        <label for="newUser">Usuario</label>
       </div>
-    </div>
+      <div class="user-box">
+        <input type="password" id="newPass" required>
+        <label for="newPass">Contraseña</label>
+      </div>
+      <button type="submit" class="animated-button">
+        Registrar
+        <span></span><span></span><span></span><span></span>
+      </button>
+    </form>
+    <p style="text-align: center; margin-top: 10px;">
+      ¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Iniciar sesión</a>
+    </p>
   </div>
-</div>
-        </div>
-          <!-- ========== title-wrapper end ========== -->
 
-
-
-
-        </div>
-        <!-- end container -->
-      </section>
-      <!-- ========== section end ========== -->
-      <div style="margin-bottom:40px;"></div>
-
-
-      <!-- ========== footer start =========== -->
-      <footer class="footer">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 order-last order-md-first">
-              <div class="copyright text-center text-md-start">
-              </div>
-            </div>
-            <!-- end col-->
-            <div class="col-md-6">
-              <div class="terms d-flex justify-content-center justify-content-md-end">
-                <a href="#0" class="text-sm">Términos y Condiciones</a>
-                <a href="#0" class="text-sm ml-15">Política de Privacidad</a>
-              </div>
-            </div>
-          </div>
-          <!-- end row -->
-        </div>
-        <!-- end container -->
-      </footer>
-      <!-- ========== footer end =========== -->
-    </main>
-    <!-- Modal de confirmación -->
-    <div class="modal fade" id="modalConfirmarTratamiento" tabindex="-1" aria-labelledby="modalConfirmarTratamientoLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalConfirmarTratamientoLabel">Confirmar acción</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            ¿Desea agregar este tratamiento?
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" id="confirmarAgregarTratamiento">Sí, agregar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ======== main-wrapper end =========== -->
-
-    <!-- ========= All Javascript files linkup ======== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/Chart.min.js"></script>
-    <script src="assets/js/dynamic-pie-chart.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/fullcalendar.js"></script>
-    <script src="assets/js/jvectormap.min.js"></script>
-    <script src="assets/js/world-merc.js"></script>
-    <script src="assets/js/polyfill.js"></script>
-    <script src="assets/js/main.js"></script>
-
-    <script>
-
-
-function toggleMenu() {
-  const menu = document.getElementById('responsiveMenu');
-  menu.classList.toggle('show');
-}
-
-  function toggleMenu() {
-    const menu = document.getElementById('responsiveMenu');
-    menu.classList.toggle('d-none');
-    setTimeout(() => {
-      menu.classList.toggle('show');
-    }, 10);
-  }
-
-  function closeMenu() {
-    const menu = document.getElementById('responsiveMenu');
-    menu.classList.remove('show');
-    setTimeout(() => {
-      menu.classList.add('d-none');
-    }, 300);
-  }
-
-  // Cierra el menú si haces clic fuera
-  document.addEventListener('click', function (event) {
-    const menu = document.getElementById('responsiveMenu');
-    const toggle = document.querySelector('.menu-toggle');
-
-    if (
-      menu.classList.contains('show') &&
-      !menu.contains(event.target) &&
-      !toggle.contains(event.target)
-    ) {
-      closeMenu();
+  <script>
+    // Cambiar entre login y registro
+    function mostrarRegistro() {
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('registro-section').style.display = 'block';
     }
-  });
+    function mostrarLogin() {
+      document.getElementById('registro-section').style.display = 'none';
+      document.getElementById('login-section').style.display = 'block';
+    }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        var btnAgregar = document.getElementById("btn-agregar-tratamiento");
-        var modalElement = document.getElementById("modalConfirmarTratamiento");
-        var confirmarBtn = document.getElementById("confirmarAgregarTratamiento");
-        var form = document.getElementById("treatment-form");
-        var modal;
-        // Obtener el índice de edición de la URL
-        function getEditIndex() {
-          var params = new URLSearchParams(window.location.search);
-          var idx = params.get('edit');
-          return idx !== null ? parseInt(idx) : null;
-        }
-        var editIdx = getEditIndex();
-        // Si editIdx existe, llenar el formulario con los datos
-        if (editIdx !== null && !isNaN(editIdx)) {
-          var tratamientos = [];
-          try {
-            tratamientos = JSON.parse(localStorage.getItem("tratamientos")) || [];
-          } catch (e) {
-            tratamientos = [];
-          }
-          var t = tratamientos[editIdx];
-          if (t) {
-            document.getElementById("name").value = t.nombre || "";
-            document.getElementById("quantity").value = t.cantidad || "";
-            document.getElementById("quantity-unit").value = t.unidad || "unidades";
-            document.getElementById("med-type").value = t.tipo || "";
-            document.getElementById("start-date").value = t.inicio || "";
-            document.getElementById("end-date").value = t.fin || "";
-            document.getElementById("dose-interval").value = t.intervalo || "";
-            document.getElementById("dose-time").value = t.hora || "";
-            document.getElementById("notes").value = t.notas || "";
-            btnAgregar.textContent = "Guardar cambios";
-          }
-        }
-        if (window.bootstrap && modalElement) {
-          modal = new bootstrap.Modal(modalElement);
-        }
-        if (btnAgregar && modal) {
-          btnAgregar.addEventListener("click", function (e) {
-            e.preventDefault();
-            modal.show();
-          });
-        }
-        if (confirmarBtn && form) {
-          confirmarBtn.addEventListener("click", function () {
-            modal.hide();
-            var tratamientos = [];
-            try {
-              tratamientos = JSON.parse(localStorage.getItem("tratamientos")) || [];
-            } catch (e) {
-              tratamientos = [];
-            }
-            var nuevo = {
-              nombre: document.getElementById("name").value,
-              cantidad: document.getElementById("quantity").value,
-              unidad: document.getElementById("quantity-unit").value,
-              tipo: document.getElementById("med-type").value,
-              inicio: document.getElementById("start-date").value,
-              fin: document.getElementById("end-date").value,
-              intervalo: document.getElementById("dose-interval").value,
-              hora: document.getElementById("dose-time").value,
-              notas: document.getElementById("notes").value
-            };
-            if (editIdx !== null && !isNaN(editIdx)) {
-              tratamientos[editIdx] = nuevo;
-            } else {
-              tratamientos.push(nuevo);
-            }
-            localStorage.setItem("tratamientos", JSON.stringify(tratamientos));
-            window.location.href = "registros.html";
-          });
-        }
-      });
-    </script>
-  </body>
+    // Validación de usuario y contraseña
+    function validarUsuario(usuario) {
+      return usuario.length >= 4 && !/\s/.test(usuario);
+    }
+    function validarPassword(pass) {
+      return pass.length >= 6 && /\d/.test(pass); // mínimo 6 caracteres y al menos un número
+    }
+
+    // Registro
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const user = document.getElementById("newUser").value.trim();
+      const pass = document.getElementById("newPass").value.trim();
+
+      if (!validarUsuario(user)) {
+        alert("El usuario debe tener al menos 4 caracteres y no contener espacios.");
+        return;
+      }
+      if (!validarPassword(pass)) {
+        alert("La contraseña debe tener al menos 6 caracteres e incluir al menos un número.");
+        return;
+      }
+
+      const savedUser = localStorage.getItem("usuario");
+      if (savedUser && savedUser.toLowerCase() === user.toLowerCase()) {
+        alert("Este usuario ya está registrado. Por favor, inicia sesión.");
+        mostrarLogin();
+        return;
+      }
+
+      localStorage.setItem("usuario", user);
+      localStorage.setItem("password", pass);
+      alert("Usuario registrado exitosamente. Ahora puedes iniciar sesión.");
+      mostrarLogin();
+    });
+
+    // Login
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const user = document.getElementById("usuario").value.trim();
+      const pass = document.getElementById("password").value.trim();
+
+      if (!user || !pass) {
+        alert("Por favor, completa todos los campos.");
+        return;
+      }
+
+      const savedUser = localStorage.getItem("usuario");
+      const savedPass = localStorage.getItem("password");
+
+      if (user === savedUser && pass === savedPass) {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "inicio de revision2.html";
+      } else {
+        alert("Usuario o contraseña incorrectos");
+      }
+    });
+  </script>
+</body>
 </html>
